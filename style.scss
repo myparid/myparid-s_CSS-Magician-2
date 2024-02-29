@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+;
+$main:#F6EBDA;
+$putih:#ffffff;
+$aksen:#2F2105;
+$hitam:#000000;
+$cream:#f9d9aa;
+$orange:#FF902A;
+$kuning:#ffc107;
+
+
+*{
+    font-family: 'poppins', sans-serif;
+}
+body{
+    padding: 0px;
+    margin:0px;
+}
+.kosong1{
+    background-color: $putih;
+    height:10vmax;
+    color:red;
+}
+.about{
+    width: 100%;
+    height:40vmax;
+    position: relative;
+
+    .back{
+        width: 100%;
+        height: 35vmax;
+        background-color: $main;
+        color: $main;
+        position: absolute;
+    }
+    .bg{
+        width: 100%;
+        position: absolute;
+        padding: 25px 0 25px 0;
+        opacity: 25%;
+        filter: brightness(400%) contrast(300%) saturate(70%);
+        -webkit-filter: brightness(400%) contrast(300%) saturate(70%);
+    }
+    .produk{
+        width:25vmax;
+        position: absolute;
+        left: 15vmax;
+        top:-5vmax;
+        border: 5px solid rgba($putih, .75) ;
+        border-radius: 5%;
+        -webkit-border-radius: 5%;
+        -moz-border-radius: 5%;
+        -ms-border-radius: 5%;
+        -o-border-radius: 5%;
+        filter:drop-shadow(0px 0px 10px rgba($hitam, .5));
+        -webkit-filter:drop-shadow(0px 0px 10px rgba($hitam, .5));
+    }
+    .tulisan{
+        position: absolute;
+        top:5vmax;
+        left:55vmax;
+        width: 40vmax;
+        h1{
+        font-weight: 600;
+        }
+        span{
+            text-decoration:underline $orange 4px ;
+            text-underline-offset: 8px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+        .sub{
+            font-size: x-large;
+            font-weight: 600;
+            width:25vmax;
+        }
+        .p{
+            font-size: large;
+            width: 35vmax;
+            font-weight: 500;
+            opacity:50% ;
+        }
+        .btn{
+            background-color: $aksen;
+            width: fit-content;
+            padding: 10px 20px;
+            color:$kuning;
+            font-size: smaller;
+            font-weight: 600;
+            border-radius: 15% 50% ;
+            -webkit-border-radius: 15% 50% ;
+            -moz-border-radius: 15% 50% ;
+            -ms-border-radius: 15% 50% ;
+            -o-border-radius: 15% 50% ;
+        }
+    }
+}
+
+
+@mixin card{
+    width:20vmax;
+    filter:drop-shadow(0px 0px 10px rgba($hitam, .3));
+    background-color: $putih;
+    padding: 30px 20px 20px 20px;
+    margin:25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-filter:drop-shadow(-3px 3px 5px rgba($hitam, .2));
+}
+
+@mixin rate{
+    background-color: $putih;
+    display: flex;
+    position: absolute;
+    margin:40px 30px;
+    padding:0 10px;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    outline: 3px solid rgba($putih, .5);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+@mixin gambar{
+    width: 20vmax;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@mixin barang{
+    position: relative;
+    height: 5vh;
+}
+
+@mixin nama{
+    font-size: x-large;
+    font-weight: 600;
+    position: absolute;
+    margin-left: 5px;
+}
+
+@mixin harga{
+    font-size: x-large;
+    font-weight: 700;
+    position: absolute;
+    margin-right: 5px;
+    right: 0;
+}
+
+@mixin deskripsi{
+    font-size: small;
+    padding: 0px 5px;
+    font-weight: 700;
+    opacity: 50%;
+    width: 55%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    height: 6vh;
+}
+
+
+
+
+
+
+
+
+.special{
+
+    .tulisan{
+        margin-left: 10vmax;
+        font-weight: 600;
+        span{
+        text-decoration:underline $orange 4px ;
+        text-underline-offset: 8px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        }
+    }
+    .baris{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    .card1{
+        @include card;
+
+
+        .rate{
+            @include rate;
+
+            h1{
+            font-size: small;
+            display: flex;
+            align-items: center;
+            padding: 0 ;
+            margin:3px;
+            }
+            img{
+                height: 15px;
+                width: auto;
+                display: flex;
+                align-items: center;
+                margin-left: 5px;
+            }
+        }
+        img{
+            @include gambar;
+            }
+        .barang{
+            @include barang;
+
+            .nama{
+                @include nama;
+            }
+            .harga{
+                @include harga;
+            }
+        }
+        .deskripsi{
+            @include deskripsi
+        }
+        .beli{
+                background-color: $orange;
+                width: fit-content;
+                height: fit-content;
+                padding:15px;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: 20px;
+}
+            .keranjang{
+                width: 20px;
+                height: auto;
+                display: flex;
+                align-items: center;
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;
+}
+}
+}
+}
